@@ -154,7 +154,7 @@
         right: 0;
         box-sizing: border-box;
         width: 35vw;
-        border-radius: 10% 0 10% 10%;
+        border-radius: 0 0 0 50%;
         z-index: 50;
 
     }
