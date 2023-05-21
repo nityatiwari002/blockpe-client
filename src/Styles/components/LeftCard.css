@@ -6,7 +6,7 @@
     box-sizing: border-box;
     background-color:  #034971;
     color: #fff;
-    z-index: -1;
+    z-index: 1;
 }
 
 

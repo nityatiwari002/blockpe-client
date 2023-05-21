@@ -11,19 +11,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
-const user = {
-	name: "Nitya Tiwari",
-	WalletBal: "124",
-	CurrType: "Eth",
-	txn: [
-		{ type: 1, to: "abc" }, //sent money
-		{ type: 2, from: "def" },
-	],
-	pfp: "https://fastly.picsum.photos/id/9/5000/3269.jpg?hmac=cZKbaLeduq7rNB8X-bigYO8bvPIWtT-mh8GRXtU3vPc",
-};
+
 
 const buttonInfo = [
-	{ icon: faUser, txt: "Profile", link: "profile" },
+	{ icon: faUser, txt: "Profile", link: "" },
 	{ icon: faMoneyCheckDollar, txt: "Wallet Balance", link: "wallet" },
 	{ icon: faClockRotateLeft, txt: "Transaction History", link: "history" },
 	{ icon: faBell, txt: "Notifications", link: "notifications" },
@@ -32,6 +23,7 @@ const buttonInfo = [
 ];
 
 function LeftCard(props) {
+	const user = JSON.parse(localStorage.getItem("user"));
 	return (
 		<>
 			<div
@@ -66,8 +58,8 @@ function LeftCard(props) {
 					<button className="dsh-button">Receive Money</button>
 				</div>
 				<div className="navigators">
-					{buttonInfo.map((button) => (
-						<NavLink to={button.link}>
+					{buttonInfo.map((button, index) => (
+						<NavLink to={button.link} key={index}>
 							<div className="navigator">
 								<div className="navigator-icon">
 									<FontAwesomeIcon icon={button.icon} />

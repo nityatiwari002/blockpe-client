@@ -6,15 +6,11 @@ import Header from "./components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+
+
 function Dashboard() {
+	const [user, setUser] = useState(localStorage.getItem("user"));
 	const [showPanel, toggler] = useState(false);
-	const [smSize, resizer] = useState(window.innerWidth);
-	useEffect(() => {
-		window.addEventListener("resize", () => {
-			resizer(window.innerWidth);
-			smSize < 1000 ? toggler(false) : toggler(true);
-		}, false);
-	}, [smSize]);
 	return (
 		<>
 			<div
@@ -29,7 +25,7 @@ function Dashboard() {
 			</div>
 			<Header />
 			<Theme />
-			<LeftCard visible={showPanel ? "Y" : "N"} />
+			<LeftCard visible={showPanel ? "Y" : "N"} user={user}/>
 			<Outlet />
 		</>
 	);

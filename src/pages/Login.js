@@ -9,6 +9,8 @@ import {
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import userdata from "../data/userdata";
+
 function Login() {
 	const [pwvis, stateChange] = useState(false);
 	function changeFocus1() {
@@ -28,17 +30,18 @@ function Login() {
 		else targs[0].className = "input-box";
 	}
 
-    function checkValid() {
-        let email = document.querySelector("#email").value;
-        let password = document.querySelector("#password").value;
-        if(email === "" || password === "") {
-            alert("Please fill all the fields");
-        }
-        else {
-            alert("Login Successful");
-            window.location.href = "/dashboard";
-        }
-    }
+	function checkValid() {
+		let email = document.querySelector("#email").value;
+		let password = document.querySelector("#password").value;
+		if (email === "" || password === "") {
+			alert("Please fill all the fields");
+		} else {
+			alert("Login Successful");
+			window.location.href = "/dashboard";
+			localStorage.setItem("user", JSON.stringify(userdata));
+
+		}
+	}
 	return (
 		<div className="bg">
 			<div className="container">
@@ -108,14 +111,16 @@ function Login() {
 					<div className="alt-login">
 						<a href="#">Forgot password?</a>
 					</div>
-					<button id="submit-but" onClick={checkValid}>LOGIN</button>
-                    <div className="left-txt">
-                        Do not have an account?
-                        <a href="/signup"> Sign Up</a>
-                    </div>
-                    <div className="left-txt">
-                        <a href="/home">Click here to go back</a>
-                    </div>
+					<button id="submit-but" onClick={checkValid}>
+						LOGIN
+					</button>
+					<div className="left-txt">
+						Do not have an account?
+						<a href="/signup"> Sign Up</a>
+					</div>
+					<div className="left-txt">
+						<a href="/home">Click here to go back</a>
+					</div>
 				</div>
 				<div className="right-img">
 					<img src={img} alt="login-img" className="login-img" />

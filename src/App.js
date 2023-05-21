@@ -5,8 +5,10 @@ import Base from "./pages/Base";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/components/Profile";
+import { useState } from "react";
 
 function App() {
+	const [isLoggedIn, logIn] = useState(true);
 	return (
 		<>
 			<Router>
@@ -17,7 +19,7 @@ function App() {
 					</Route>
 					<Route path="/login" element={<Login />} />
 					<Route path="/dashboard/" element={<Dashboard />}>
-						<Route index path="profile" element={<Profile />} />
+						<Route index  element={<Profile />} />
 					</Route>
 				</Routes>
 			</Router>
