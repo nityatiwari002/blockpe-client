@@ -6,6 +6,11 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/components/Profile";
 import { useState } from "react";
+import WalletBalance from "./pages/components/WalletBalance";
+import Transactions from "./pages/components/Transactions";
+import Notifications from "./pages/components/Notifications";
+import Settings from "./Settings";
+import Help from "./Help";
 
 function App() {
 	const [isLoggedIn, logIn] = useState(true);
@@ -13,13 +18,20 @@ function App() {
 		<>
 			<Router>
 				<Routes>
-					
 					<Route path="/" element={<Base />}>
 						<Route index element={<Home />} />
 					</Route>
 					<Route path="/login" element={<Login />} />
 					<Route path="/dashboard/" element={<Dashboard />}>
-						<Route index  element={<Profile />} />
+						<Route index element={<Profile />} />
+						<Route path="wallet" element={<WalletBalance />} />
+						<Route path="history" element={<Transactions />} />
+						<Route
+							path="notifications"
+							element={<Notifications />}
+						/>
+						<Route path="settings" element={<Settings />} />
+						<Route path="help" element={<Help />} />
 					</Route>
 				</Routes>
 			</Router>

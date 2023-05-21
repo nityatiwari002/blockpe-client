@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../Styles/components/Profile.css";
+import ProfileHeader from "./ProfileHeader";
 
 const profileDetails = [
 	{ title: "Email", body: "email" },
@@ -17,28 +18,20 @@ function Profile(props) {
 	const user = JSON.parse(localStorage.getItem("user"));
 	console.log(localStorage);
 	const [disabled, toggleDisable] = useState(false);
+	const [data, setData] = useState(
+		profileDetails.map((detail) => {
+			return detail.body;
+		})
+	);
+	console.log(data);
+
 	return (
 		<div className="window-card">
-			<div className="profile-header">
-				<div className="profile-pic">
-					<img
-						src={user.pfp}
-						alt={user.name}
-						className="pfp profile-pfp"
-					/>
-				</div>
-				<div className="profile-name">{user.name}</div>
-				<div className="edit-button">
-					<button
-						className="edit-button-but"
-						onClick={() => {
-							toggleDisable(true);
-						}}
-					>
-						Edit Profile
-					</button>
-				</div>
-			</div>
+			<ProfileHeader
+				user={user}
+				buttonState={true}
+				toggleDisable={toggleDisable}
+			/>
 			<div className="profile-body">
 				<div className="profile-info">
 					<div className="profile-info-title">
@@ -57,7 +50,16 @@ function Profile(props) {
 											: "profile-info-body-item-body"
 									}
 									type="text"
-									value={user[detail.body]}
+									// onChange={(e) => {
+									// 	this.setState({});
+									// }}
+									onChange={(e) => {
+										this.setState(e.target.value);
+										let temp = data;
+										temp[index] = e.target.value;
+										setData(temp);
+									}}
+									value={user[data[index]]}
 									onInput={() => {
 										console.log("changed");
 									}}
@@ -69,7 +71,11 @@ function Profile(props) {
 			</div>
 			<div className="save-profile">
 				<button
-					className={disabled ? "save-profile-but" : "save-profile-but but-hidden"}
+					className={
+						disabled
+							? "save-profile-but"
+							: "save-profile-but but-hidden"
+					}
 					onClick={() => {
 						toggleDisable(false);
 					}}
