@@ -1,13 +1,12 @@
 .separator-bottom {
     width: 100vw;
     height: 10vh;
-    background: pink;
-    /* background: #4fcfc17d; */
     
     background: -webkit-linear-gradient(to top, var(--body-background), #4fcfc17d);
     background: linear-gradient(to top, var(--body-background), #57dcce);
     /* margin: -4% 0; */
     z-index: -1;
+    overflow: hidden;
 
 }
 
@@ -49,6 +48,7 @@
     /* filter: drop-shadow(3px 5px 2px var(--body-background-invert)); */
     font-size: 20rem;
     rotate: 20deg;
+    z-index: 1;
     /* z-index: 5; */
 }
 
@@ -59,4 +59,6 @@
     font-weight: 800;
     text-align: center;
     margin: -250px 0 0 0;
+    z-index: 2;
 }
+

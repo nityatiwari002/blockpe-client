@@ -9,6 +9,7 @@
     border-radius: 50% 0 0 50%;
     background-color: var(--body-background);
     border: 1px solid var(--text-color);
+    z-index: 10;
 }
 .Theme:hover{
     cursor: pointer;

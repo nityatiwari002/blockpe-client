@@ -1,5 +1,6 @@
 .get-started{
     display: flex;
+    z-index: 2;
 }
 
 .getStarted{
@@ -12,6 +13,7 @@
     margin-top: 2rem;
     cursor: pointer;
     margin: 2rem auto;
+    z-index: 2;
 }
 
 .getStarted a{
