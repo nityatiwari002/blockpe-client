@@ -19,7 +19,7 @@ function Landing() {
 		}, 5000);
 	});
 	return (
-		<>
+		<div className="landing-wrapper">
 			<div className="Landing">
 				<div className="landing-txt">Welcome to</div>
 				<div className="landing-title">BlockPe</div>
@@ -34,7 +34,7 @@ function Landing() {
 				<GetStarted/>
 			</div>
 			<div className="separator-bottom"></div>
-		</>
+		</div>
 	);
 }
 
