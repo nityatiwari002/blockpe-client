@@ -1,15 +1,17 @@
+.get-started{
+    display: flex;
+}
+
 .getStarted{
-    align-self: center;
-    box-sizing: border-box;
     padding: 10px 20px;
     font-size: 1.7rem;
     background-color: var(--blue-dark);
     border: none;
     border-radius: 5px;
-    margin-left: 43%;
     margin-bottom: 5rem;
     margin-top: 2rem;
     cursor: pointer;
+    margin: 2rem auto;
 }
 
 .getStarted a{

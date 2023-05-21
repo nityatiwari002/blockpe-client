@@ -31,7 +31,7 @@ function Navbar() {
 					/>
 					<ul className="menu-list">
 						<li className="menu-item">
-							<a href="" className="nav-link">
+							<a href="/" className="nav-link">
 								Home
 							</a>
 						</li>
@@ -43,6 +43,11 @@ function Navbar() {
 						<li className="menu-item">
 							<a href="contact" className="nav-link">
 								Contact
+							</a>
+						</li>
+						<li className="menu-item">
+							<a href="about" className="nav-link">
+								About
 							</a>
 						</li>
 						<li className="menu-item">

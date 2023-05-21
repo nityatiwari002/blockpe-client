@@ -78,7 +78,7 @@
 .placeholder {
     color: rgb(102, 123, 143);
     /* margin-top: 10px; */
-    margin-bottom: 5px;
+    /* margin-bottom: 2px; */
     margin-left: 2px;
     font-size: 1.2rem;
 }
@@ -107,7 +107,8 @@
 .text-boxes {
 
     width: 90%;
-    height: 15px;
+    height: 35px;
+    line-height: 1rem;
     padding: 2px 2px 2px;
     font-size: 1.2rem;
     /* background-color: blue; */

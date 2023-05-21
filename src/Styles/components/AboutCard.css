@@ -43,12 +43,13 @@
 }
 
 .AboutCard-img{
-    width: 60%;
+    width: 500px;
+    min-width: 200px;
     margin: 0 50px 0 0;
 }
 
 .imgs{
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -70,3 +71,35 @@
     color: var(--blue-dark);
 }
 
+@media (max-width : 800px){
+    .AboutCard{
+        margin-top: 5rem;
+    }
+    .AboutCard-title{
+        font-size: 3rem;
+    }
+    .AboutCard-container{
+        width: 90%;
+    }
+    .AboutCard-item-title{
+        font-size: 1.5rem;
+    }
+    .AboutCard-item-desc{
+        font-size: 1rem;
+    }
+    .AboutCard-img{
+        width: 60%;
+        margin: 0;
+    }
+    .About_card{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    .About_card:nth-of-type(even){
+        flex-direction: column;
+    }
+    .About_card:nth-of-type(even) .AboutCard-img{
+        margin: 0;
+    }
+}
