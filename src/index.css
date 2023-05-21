@@ -19,6 +19,8 @@
     --body-background-invert: #fff;
     --text-color: #fff;
     --text-color-invert: #000;
+    --blue-darker:#53b1e8;
+    --blue-dark:#23a1ea;
 }
 
 ::-webkit-scrollbar {
