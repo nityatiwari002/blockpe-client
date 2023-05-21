@@ -24,6 +24,7 @@
     box-sizing: border-box;
 }
 
+
 .About_card{
     max-width: 100%;
     display: flex;
@@ -53,6 +54,10 @@
     width: 100%;
 }
 
+.small{
+    width: 100px;
+}
+
 .AboutCard-item-title{
     font-size: 2rem;
     font-weight: 800;
@@ -64,11 +69,16 @@
 
 
 .AboutCard-item-desc{
+    width: 500px;
     font-size: 1.2rem;
     font-weight: 400;
     font-family: 'Roboto mono', monospace;
     margin-bottom: 1rem;
     color: var(--blue-dark);
+}
+
+.desc-small{
+    width: 200px;
 }
 
 @media (max-width : 800px){
@@ -85,6 +95,7 @@
         font-size: 1.5rem;
     }
     .AboutCard-item-desc{
+        width: 400px;
         font-size: 1rem;
     }
     .AboutCard-img{

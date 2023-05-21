@@ -16,7 +16,7 @@ function Navbar() {
 	return (
 		<div className="wrapper">
 			<header className="topnav">
-				<NavLink className="logo" to="/home">
+				<NavLink className="logo" to="/">
 					<FontAwesomeIcon
 						icon={faSquareVirus}
 						className="logo-icon"
