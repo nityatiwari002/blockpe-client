@@ -1,0 +1,12 @@
+.window-card{
+    position: fixed;
+    top:10vh;
+    /* left: 20rem;
+    right: 20rem; */
+    background-color: pink;
+    width: 40%;
+    height: 100%;
+    padding: 3%;
+    margin: auto;
+}
+
